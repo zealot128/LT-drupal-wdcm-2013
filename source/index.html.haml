@@ -1,26 +1,87 @@
 %section#intro
-  = image_tag "logo.png"
 
-  %h3 Headline
+  %h1.title Drupal
 
-  %p
-    = image_tag "image.gif"
+  .subtitle
     %br
     = File.mtime(__FILE__).strftime("%d.%m.%Y")
+    %br
+    #wdcm(style="background: white; padding: 5px'; display: inline-block")
+      = image_tag "wdcm.png"
 
 %section
   %section
+    <script type="text/javascript" src="//www.google.de/trends/embed.js?hl=en-GB&q=drupal,+drupal+6,+drupal+7,+drupal+5&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330"></script></script>
+  %section
+    %h1 Disclaimer
+  %section
+    %h2 Überblick
+    %ul
+      %li XAMP: MySQL + PHP
+      %li Datenbank: MySQL, Postgresql, Sqlite
+      %li
+        Aktuell: Drupal 7 (nur &lt; PHP 5.4)
+        %br
+        8 in Vorbereitung
+  %section
+    %h2 Verbreitung
+    %ul
+      %li 20.115  Module
+      %li 1.617 Themes
+
+%section
+  %section
+    %h2 Kernfeatures
+    %ul
+      %li Nutzerauthentifikation, Rollenbasierte Rechte
+      %li Statischer Content ("nodes"), leicht anpassbar
+      %li &rarr; Blog
+      %li SEO-Kram: lesbare URLs, sitemaps
+    %ul.fragment
+      %li ordentliches Menü/Navigationssystem
+      %li Performance: CSS/JS minify, Caching (erweiterbar)
+      %li I18n/l10n
+      %li Kategorisierung
+
+
+  %section
+    %h2 Erweiterbarkeit
+    %ul
+      %li extrem modular &rarr; selbst Kernfeatures sind nur Module,
+      %li Module mit Dependency-Management
+      %li recht gute Codequalität &amp; Testsuite
+      %li leicht hackbare Themes und Arbeitsabläufe (PHP)
+
+  %section
+    %h2 Anwendungsfälle
+    Flexibilität: Blogs, Corporate Websites, eCommerce, micro social network, Umfragetool
     %blockquote
-      Quotes
-
+      Alles zwischen einem Blog und einer Web-App
   %section
-    its html, so try embedding iframes, google trends, youtube videos etc.
-
+    Installationsprofile + mächtiges Commandline-Interface (drush):
+    %br
+    Ideal für Freelancer dank Automatisierung
   %section
-    %h2 Code
-    %code.ruby
-    %pre.prettyprint.lang-ruby
-      %code.lang-ruby
-        :preserve
-          if a?.has(":something")?
-            console.log "..."
+    %h2 Nachteile
+    %ul
+      %li Anfangs schwierig (Lernkurve)
+      %li PHP (+/-)
+      %li Teilweise altbacken (Wysiwyig Editoren!)
+      %li Ohne Caching auf Shared-Hoster sehr langsam
+      %li kein automatisches Upgrade der Kernmodule
+      %li Sprung zwischen Majorversionen (5, 6, 7, 8) #pain
+
+%section
+  %section
+    Wordpress &lt; Joomla &lt; Drupal &lt; Typo3
+  %section
+    %blockquote
+      Drupal runs millions of web sites, including many of the world’s biggest. It’s especially strong among major governments and industry-leading enterprises, but is easy enough to be the platform of choice for individuals and small companies.
+    .author
+      http://www.acquia.com/what-is-drupal
+  %section
+    = link_to "http://www.stefanwienert.net", "http://www.stefanwienert.net"
+    %br
+    <a href="https://twitter.com/stefanwienert" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @stefanwienert</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
