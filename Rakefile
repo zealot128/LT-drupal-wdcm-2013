@@ -11,6 +11,7 @@ end
 desc "Deploy to github pages"
 task :deploy do
     sh "git diff-index --quiet HEAD --" do |ok,res|
+      p ok
       if !ok
         $stderr.puts "You have uncommitted changes!"
         sh "git status --short"
