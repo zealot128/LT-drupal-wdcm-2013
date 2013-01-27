@@ -19,8 +19,10 @@ task :deploy do
     end
   sh "middleman build"
   sh "git checkout -B gh-pages"
-  mv "build/*" "."
+  sh "mv build/* ."
   sh "git add ."
   sh "git status --short"
-  puts "Commit changes and push:\ngit push origin gh-pages"
+  sh "git add ."
+  sh "git push origin gh-pages"
+  sh "git checkout master"
 end
