@@ -11,7 +11,6 @@ end
 desc "Deploy to github pages"
 task :deploy do
     sh "git diff-index --quiet HEAD --" do |ok,res|
-      p ok
       if !ok
         $stderr.puts "You have uncommitted changes!"
         sh "git status --short"
@@ -19,7 +18,9 @@ task :deploy do
       end
     end
   sh "middleman build"
-  #sh "git checkout -B gh-pages"
-  #mv "build/*" "."
-  sh "git st"
+  sh "git checkout -B gh-pages"
+  mv "build/*" "."
+  sh "git add ."
+  sh "git status --short"
+  puts "Commit changes and push:\ngit push origin gh-pages"
 end
