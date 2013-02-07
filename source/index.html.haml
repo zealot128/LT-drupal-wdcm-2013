@@ -3,22 +3,36 @@
   %h1.title Drupal
 
   .subtitle
+
     %br
     = File.mtime(__FILE__).strftime("%d.%m.%Y")
     %br
     #wdcm(style="background: white; padding: 5px'; display: inline-block")
       = image_tag "wdcm.png"
+%section
+  %h2 Stefan Wienert
+  %ul
+    %li Webentwickler
+    %li Drupal-Modulentwickler seit 2009
+    %li
+      %strong Disclaimer:
+      Seit 2011 vorrangig Ruby on Rails
 
 %section
   %section
-    <script type="text/javascript" src="//www.google.de/trends/embed.js?hl=en-GB&q=drupal,+drupal+6,+drupal+7,+drupal+5&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330"></script></script>
+    <script type="text/javascript" src="//www.google.com/trends/embed.js?hl=en-US&q=drupal,+Contao,+Joomla,+Typo3,+Wordpress&geo=DE&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=800&h=530"></script>
   %section
-    %h1 Disclaimer
+    = image_tag "https://de.mailjet.com/images/plugins/drupal/head.png", width: 300
+  %section
+    %ul
+      %li Version 1: 2001
+      %li Seit 2007 brauchbar
   %section
     %h2 Überblick
     %ul
       %li XAMP: MySQL + PHP
       %li Datenbank: MySQL, Postgresql, Sqlite
+      %li jQuery
       %li
         Aktuell: Drupal 7 (nur &lt; PHP 5.4)
         %br
@@ -26,7 +40,7 @@
   %section
     %h2 Verbreitung
     %ul
-      %li 20.115  Module
+      %li 20.311  Module
       %li 1.617 Themes
   %section
     %p Corporate-Websites + Organizations
@@ -37,10 +51,12 @@
   %section
     %h2 Kernfeatures
     %ul
-      %li Nutzerauthentifikation, Rollenbasierte Rechte
-      %li Statischer Content ("nodes"), leicht anpassbar
-      %li &rarr; Blog, Page, Eintrag, Job, ...
-      %li SEO-Kram: lesbare URLs, sitemaps
+      %li Allgemeiner statischer Content ("nodes"), leicht anpassbar
+      %li &rarr; Blog, Page, Eintrag, Job, Rezensionen ...
+    = image_tag "cck1.png"
+  %section
+    %h3 Nutzerauthentifikation, Rollenbasierte Rechte
+    = image_tag "rollen.png"
   %section
     %h2 ... Features
     %ul
@@ -48,6 +64,9 @@
       %li Performance: CSS/JS minify, Caching (erweiterbar)
       %li I18n/l10n
       %li Kategorisierung
+      %li Views: Filterung von Inhalten ohne SQL-Kenntnisse möglich
+      %li SEO-Kram: lesbare URLs, sitemaps
+      / hierarchische Kats
 
 
   %section
@@ -57,6 +76,7 @@
       %li Module mit Dependency-Management
       %li recht gute Codequalität &amp; Testsuite
       %li leicht hackbare Themes und Arbeitsabläufe (PHP)
+    = image_tag "instacode.jpg"
 
   %section
     %h2 Anwendungsfälle
@@ -64,25 +84,43 @@
     %blockquote
       Alles zwischen einem Blog und einer Web-App
   %section
-    Installationsprofile + mächtiges Commandline-Interface (drush):
+    Installationsprofile (Distributionen) + mächtiges Commandline-Interface (drush):
     %br
     Ideal für Freelancer dank Automatisierung
   %section
     %h2 Nachteile
     %ul
       %li Anfangs schwierig (Lernkurve)
+      %li Usability &rarr; Pre-7 grausam, 7 immer noch überladen
       %li PHP (+/-)
-      %li Teilweise altbacken (Wysiwyig Editoren!)
+      %li Teilweise altbacken (Wysiwyig-Editoren...)
       %li Ohne Caching auf Shared-Hoster sehr langsam
       %li kein automatisches Upgrade der Kernmodule
       %li Sprung zwischen Majorversionen (5, 6, 7, 8) #pain
 
 %section
   %section
-    Wordpress &lt; Joomla &lt; Drupal &lt; Typo3
+    %h2.title Fazit
+  %section
+    Enterprisey'ness: Wordpress &lt; Joomla &lt; Drupal &lt; Typo3
+    %ul
+      %li Geduld + Ausdauer vorrausgesetzt
+      %li enorm viele Module
+      %li FOSS
+      %li <strong>Positive Entwicklung</strong>
+  %section
+    Ausblick Drupal 8
+    %ul
+      %li 2013
+      %li Mobile/Responsive
+      %li Symfony2
+      %li Webservices + REST
   %section
     %blockquote
-      Drupal runs millions of web sites, including many of the world’s biggest. It’s especially strong among major governments and industry-leading enterprises, but is easy enough to be the platform of choice for individuals and small companies.
+      Drupal runs millions of web sites, including many of the world’s biggest.
+      It’s especially strong among major governments and industry-leading
+      enterprises, but is easy enough to be the platform of choice for
+      individuals and small companies.
     .author
       http://www.acquia.com/what-is-drupal
 
